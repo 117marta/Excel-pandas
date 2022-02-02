@@ -64,5 +64,42 @@ df56 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows
 df57 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=514, nrows=3, header=0)
 
 
-print(df1)
-print(df7)
+# Create function to process the data
+def get_df(data_frame):
+    # get the header (str)
+    list_of_header = data_frame.columns.values.tolist()
+    header_str = ''.join([str(i) for i in list_of_header if "Unnamed" not in i])
+
+    # drop unnecessary columns
+    data_frame.columns = data_frame.iloc[0]
+    data_frame = data_frame.drop(0)
+    data_frame = data_frame.drop(1)
+
+    # process the columns
+    data_frame.columns = data_frame.columns.str.strip()
+    data_frame.columns = [x.replace('\n', ' ') for x in data_frame.columns.to_list()]
+
+    # change the columns' names and split column 'INN' into two columns
+    data_frame = data_frame.rename(columns={'Nazwa międzynarodowa': 'Opis', 'Ilość zamawiana': 'Ilość'})
+    data_frame['INN'] = data_frame['Opis'].str.split(',').str[0]
+
+    # split header into two columns and fill the rows with it
+    def rozdziel(row):
+        row['TEMP'] = header_str
+        row['Oznaczenie zadania'], row['Tytuł zadania'] = row['TEMP'].split('.', 1)  # 1 - to first occuring
+        row = row.drop('TEMP')
+        return row
+
+    data_frame = data_frame.apply(rozdziel, axis=1)
+
+    # remove whitespaces
+    data_frame['Tytuł zadania'] = data_frame['Tytuł zadania'].str.strip()
+    data_frame['Oznaczenie zadania'] = data_frame['Oznaczenie zadania'].str.strip()
+
+    # new order of columns
+    new_order = ['Oznaczenie zadania', 'Tytuł zadania', 'Lp', 'Opis', 'INN', 'Ilość']
+    data_frame = data_frame[new_order]
+
+    return data_frame
+
+print(get_df(df1))
