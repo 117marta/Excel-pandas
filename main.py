@@ -1,16 +1,68 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import pandas as pd
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# Enter path to Excel file
+path_to_file = 'data/sample/1.xlsx'
+
+# Manually set the DataFrame parameters (usecols, skiprows, nrows)
+df1 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=1, nrows=7, header=0)
+df2 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=14, nrows=20, header=0)
+df3 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=39, nrows=3, header=0)
+df4 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=46, nrows=4, header=0)
+df5 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=54, nrows=4, header=0)
+df6 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=62, nrows=9, header=0)
+df7 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=75, nrows=42, header=0)
+df8 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=121, nrows=5, header=0)
+df9 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=130, nrows=3, header=0)
+df10 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=136, nrows=4, header=0)
+df11 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=144, nrows=4, header=0)
+df12 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=152, nrows=4, header=0)
+df13 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=160, nrows=4, header=0)
+df14 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=168, nrows=6, header=0)
+df15 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=178, nrows=5, header=0)
+df16 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=187, nrows=5, header=0)
+df17 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=196, nrows=4, header=0)
+df18 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=204, nrows=5, header=0)
+df19 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=212, nrows=3, header=0)
+df20 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=218, nrows=3, header=0)
+df21 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=223, nrows=3, header=0)
+df22 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=228, nrows=3, header=0)
+df23 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=233, nrows=3, header=0)
+df24 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=238, nrows=3, header=0)
+df25 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=244, nrows=3, header=0)
+df26 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=249, nrows=3, header=0)
+df27 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=255, nrows=3, header=0)
+df28 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=260, nrows=3, header=0)
+df29 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=265, nrows=3, header=0)
+df30 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=271, nrows=6, header=0)
+df31 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=281, nrows=4, header=0)
+df32 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=289, nrows=4, header=0)
+df33 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=297, nrows=3, header=0)
+df34 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=303, nrows=3, header=0)
+df35 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=309, nrows=3, header=0)
+df36 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=315, nrows=3, header=0)
+df37 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=321, nrows=3, header=0)
+df38 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=327, nrows=3, header=0)
+df39 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=335, nrows=6, header=0)
+df40 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=347, nrows=5, header=0)
+df41 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=358, nrows=4, header=0)
+df42 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=368, nrows=4, header=0)
+df43 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=379, nrows=5, header=0)
+df44 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=390, nrows=5, header=0)
+df45 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=401, nrows=3, header=0)
+df46 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=409, nrows=4, header=0)
+df47 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=418, nrows=3, header=0)
+df48 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=425, nrows=4, header=0)
+df49 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=435, nrows=5, header=0)
+df50 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=445, nrows=5, header=0)
+df51 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=455, nrows=5, header=0)
+df52 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=467, nrows=5, header=0)
+df53 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=478, nrows=3, header=0)
+df54 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=486, nrows=4, header=0)
+df55 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=495, nrows=5, header=0)
+df56 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=505, nrows=4, header=0)
+df57 = pd.read_excel(path_to_file, engine='openpyxl', usecols='A:C, H', skiprows=514, nrows=3, header=0)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(df1)
+print(df7)
