@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data</title>
+</head>
+<body>
+<list>
+    <ul>
+        {% for row in data %}
+        <li><strong>Index: </strong>{{ loop.index }}</br>
+            <strong>Oznaczenie zadania: </strong>{{ row[0] }}</br>
+            <strong>Tytuł zadania: </strong>{{ row[1] }}</br>
+            <strong>Lp: </strong>{{ row[2] }}</br>
+            <strong>Opis: </strong>{{ row[3] }}</br>
+            <strong>INN: </strong>{{ row[4] }}</br>
+            <strong>Ilość: </strong>{{ row[5] }}</br>
+        </li><br>
+        {% endfor %}
+    </ul>
+</list>
+</body>
+</html>
