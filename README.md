@@ -45,7 +45,7 @@ to install its dependencies
 * To extract data from an Excel file: `main.py`
 * To populate the database with data extracted from the Excel file: `database.py`
 * To show result in browser: `flask_file.py` and
-* You will be able to access it at `127.0.0.1:8000` in your browser
+* You will be able to access it at `127.0.0.1:5000` in your browser
 
 
 ## Project Status
